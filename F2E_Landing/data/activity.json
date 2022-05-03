@@ -1,0 +1,18 @@
+{
+  "personNum": 70,
+  "endTime": "2021/07/23 14:20:00",
+  "list": [
+    {
+      "level": 25,
+      "productName": "Sass"
+    },
+    {
+      "level": 50,
+      "productName": "Webpack"
+    },
+    {
+      "level": 100,
+      "productName": "資安課程"
+    }
+  ]
+}
