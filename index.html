@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <header class="hd">
+  <header class="hd" id="Header">
     <div class="hd__logo">
       <img class="hd__logoImg" src="./images/logo.png" alt="F2E前端開發" width="167" height="50">
     </div>
@@ -25,40 +25,76 @@
     <nav class="navi">
       <ul class="navi__list">
         <li class="navi__item">
-          <a href="javascript:;">挑戰自我</a>
+          <a href="#Intro">挑戰自我</a>
         </li>
         <li class="navi__item">
-          <a href="javascript:;">課程說明</a>
+          <a href="#Product">課程說明</a>
         </li>
         <li class="navi__item">
-          <a href="javascript:;">培訓成果</a>
+          <a href="#Result">培訓成果</a>
         </li>
       </ul>
     </nav>
   </header>
   <main class="main">
     <section class="banner">
-      <img class="banner__img" src="./images/banr_snow.jpg" alt="ice">
+      <div class="banner__screen mx-auto" id="BannerScreen">
+        <img class="banner__img js-banner__img" src="./images/banr_ice.jpg" alt="ice">
+        <img class="banner__img js-banner__img" src="./images/banr_mountain.jpg" alt="ice">
+        <img class="banner__img" src="./images/banr_run.jpg" alt="ice">
+        <img class="banner__img" src="./images/banr_snow.jpg" alt="ice">
+      </div>
       <div class="container mx-auto">
         <div class="banner__text">
           <p class="banner__desc">F2E 前端開發</p>
           <h1 class="banner__title">前端工程師排版試題</h1>
-          <p class="banner__desc baneer__desc--textLarge">學會，百萬年薪不是夢</p>
+          <p class="banner__desc banner__desc--textLarge">學會，百萬年薪不是夢</p>
         </div>
         <div class="file">
-          <div class="file__time">
-            <p class="file__timeDesc">優惠活動結束</p>
-            <p class="file__timeText">請再關注我們的優惠時間</p>
+          <div class="file__time" id="FileTime">
+            <p class="file__timeDesc" id="FileTimeDesc"></p>
+            <p class="file__timeText" id="FileTimeText"></p>
           </div>
-          <div class="file__prog"></div>
-          <div class="file__apply">
-            <p class="file__applyStatus">已有 <span class="file__applyNum">80</span>人報名</p>
-            <button class="file__applyBtn">搶先報名&raquo;</button>
+          <div class="file__prog">
+            <div class="progress" id="Progress">
+              <div class="progress__bar"></div>
+              <div class="progress__text js_progress__text progress__text--order0">
+                <p class="progress__desc progress__desc--first">
+                  預購開始
+                </p>
+              </div>
+              <div class="progress__text js_progress__text progress__text--order1">
+                <p class="progress__desc progress__desc--up">
+                  達 25 人
+                </p>
+                <p class="progress__desc progress__desc--down">
+                  送 Sass
+                </p>
+              </div>
+              <div class="progress__text js_progress__text progress__text--order2">
+                <p class="progress__desc progress__desc--up">
+                  達 50 人
+                </p>
+                <p class="progress__desc progress__desc--down">
+                  送 Webpack
+                </p>
+              </div>
+              <div class="progress__text js_progress__text progress__text--order3">
+                <p class="progress__desc progress__desc--up">
+                  達 100 人
+                </p>
+                <p class="progress__desc progress__desc--down">
+                  送 資安課程
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="file__apply" id="FileApply">
           </div>
         </div>
       </div>
     </section>
-    <section class="intro">
+    <section class="intro" id="Intro">
       <div class="container mx-auto row">
         <div class="intro__text">
           <h3 class="intro__title">轉職？成為前端工程師？挑戰自我？
@@ -72,37 +108,212 @@
           <img class="intro__img" src="./images/media_video.jpg" alt="media_video">
           <button class="intro__btn"><img src="./images/youtube-brands.png" alt=""></button>
         </div>
-        <div class="intro__apply">
-          <button class="intro__applyBtn">我想了解更多 »</button>
+        <div class="apply">
+          <button class="apply__Btn">我想了解更多 »</button>
         </div>
       </div>
     </section>
-    <article class="pd">
+    <article class="pd" id="Product">
       <div class="pd__titleZone">
         <h3 class="pd__title">想要培養一技之長，成為前端工程師嗎？</h3>
       </div>
       <div class="container mx-auto">
         <section class="pd__stage">
           <h4 class="pd__stageTitle">第一階段</h4>
-          <div class="grid">
-            <div class="card grid__item">
-              <figure class="card__fig">
-                <img class="card__img" src="./images/card01.jpg" alt="Java">
-                <p class="card__flag">第一週</p>
-              </figure>
-              <div class="card__text">
-                <h2 class="card__title">程式規劃基礎</h2>
-                <div class="card__desc">組合語言的描述、分析、設計技巧</div>
-              </div>
+          <div class="card">
+            <figure class="card__fig">
+              <img class="card__img" src="./images/card01.jpg" alt="Java">
+              <p class="card__flag">第一週</p>
+            </figure>
+            <div class="card__text">
+              <h2 class="card__title">程式規劃基礎</h2>
+              <p class="card__desc">組合語言的描述、分析、設計技巧</p>
             </div>
-
+          </div>
+          <div class="card">
+            <figure class="card__fig">
+              <img class="card__img" src="./images/card02.jpg" alt="Java">
+              <p class="card__flag">第二週</p>
+            </figure>
+            <div class="card__text">
+              <h2 class="card__title">物件導向程式設計</h2>
+              <p class="card__desc">具有物件概念的程式設計典範，同時也是一種程式開發的抽象方針。</p>
+            </div>
+          </div>
+          <div class="card">
+            <figure class="card__fig">
+              <img class="card__img" src="./images/card01.jpg" alt="Java">
+              <p class="card__flag">第三週</p>
+            </figure>
+            <div class="card__text">
+              <h2 class="card__title">資料結構與演算法</h2>
+              <div class="card__desc">組合語言的描述、分析、設計技巧</div>
+            </div>
+          </div>
+          <div class="card">
+            <figure class="card__fig">
+              <img class="card__img" src="./images/card01.jpg" alt="Java">
+              <p class="card__flag">第一週</p>
+            </figure>
+            <div class="card__text">
+              <h2 class="card__title">程式規劃基礎</h2>
+              <div class="card__desc">組合語言的描述、分析、設計技巧</div>
+            </div>
+          </div>
+          <div class="card">
+            <figure class="card__fig">
+              <img class="card__img" src="./images/card01.jpg" alt="Java">
+              <p class="card__flag">第一週</p>
+            </figure>
+            <div class="card__text">
+              <h2 class="card__title">程式規劃基礎</h2>
+              <div class="card__desc">組合語言的描述、分析、設計技巧</div>
+            </div>
           </div>
         </section>
+        <section class="pd__stage">
+          <h4 class="pd__stageTitle">第一階段</h4>
+          <div class="card">
+            <figure class="card__fig">
+              <img class="card__img" src="./images/card01.jpg" alt="Java">
+              <p class="card__flag">第一週</p>
+            </figure>
+            <div class="card__text">
+              <h2 class="card__title">程式規劃基礎</h2>
+              <p class="card__desc">組合語言的描述、分析、設計技巧</p>
+            </div>
+          </div>
+          <div class="card">
+            <figure class="card__fig">
+              <img class="card__img" src="./images/card02.jpg" alt="Java">
+              <p class="card__flag">第二週</p>
+            </figure>
+            <div class="card__text">
+              <h2 class="card__title">物件導向程式設計</h2>
+              <p class="card__desc">具有物件概念的程式設計典範，同時也是一種程式開發的抽象方針。</p>
+            </div>
+          </div>
+          <div class="card">
+            <figure class="card__fig">
+              <img class="card__img" src="./images/card01.jpg" alt="Java">
+              <p class="card__flag">第三週</p>
+            </figure>
+            <div class="card__text">
+              <h2 class="card__title">資料結構與演算法</h2>
+              <div class="card__desc">組合語言的描述、分析、設計技巧</div>
+            </div>
+          </div>
+          <div class="card">
+            <figure class="card__fig">
+              <img class="card__img" src="./images/card01.jpg" alt="Java">
+              <p class="card__flag">第一週</p>
+            </figure>
+            <div class="card__text">
+              <h2 class="card__title">程式規劃基礎</h2>
+              <div class="card__desc">組合語言的描述、分析、設計技巧</div>
+            </div>
+          </div>
+        </section>
+        <div class="apply">
+          <button class="apply__Btn apply__Btn--colorRev ">我有興趣 »</button>
+        </div>
+      </div>
+    </article>
+    <article class="result" id="Result">
+      <div class="result__titleZone">
+        <h3 class="result__title">培訓成果</h3>
+      </div>
+      <div class="result__content mx-auto">
+        <aside class="result__aside grid">
+          <div class="result__box">
+            <p class="result__para"><span class="result__desc">159</span> 人</p>
+            <p class="result__para">結訓校友</p>
+          </div>
+          <div class="result__box">
+            <p class="result__para"><span class="result__desc">85</span> %</p>
+            <p class="result__para">成功轉職率</p>
+          </div>
+          <div class="result__box">
+            <p class="result__para"><span class="result__desc">90</span> %</p>
+            <p class="result__para">成為前端工程師</p>
+          </div>
+        </aside>
+        <div class="result__table">
+          <table class="res">
+            <thead class="res__hd">
+              <tr class="res__title">
+                <th class="res__th"></th>
+                <th class="res__th">培訓人數</th>
+                <th class="res__th">結訓人數</th>
+                <th class="res__th">就業人數</th>
+              </tr>
+            </thead>
+            <tbody class="res__content" id="ResContent">
+              <tr class="res__row">
+                <td class="res__td">第一屆</td>
+                <td class="res__td">21人</td>
+                <td class="res__td">17人</td>
+                <td class="res__td">前端工程師 16 人</td>
+              </tr>
+              <tr class="res__row res__row--stripe">
+                <td class="res__td">第一屆</td>
+                <td class="res__td">21人</td>
+                <td class="res__td">17人</td>
+                <td class="res__td">前端工程師 16 人</td>
+              </tr>
+              <tr class="res__row">
+                <td class="res__td">第一屆</td>
+                <td class="res__td">21人</td>
+                <td class="res__td">17人</td>
+                <td class="res__td">前端工程師 16 人</td>
+              </tr>
+              <tr class="res__row res__row--stripe">
+                <td class="res__td">第一屆</td>
+                <td class="res__td">21人</td>
+                <td class="res__td">17人</td>
+                <td class="res__td">前端工程師 16 人</td>
+              </tr>
+              <tr class="res__row">
+                <td class="res__td">第一屆</td>
+                <td class="res__td">21人</td>
+                <td class="res__td">17人</td>
+                <td class="res__td">前端工程師 16 人</td>
+              </tr>
+              <tr class="res__row res__row--stripe">
+                <td class="res__td">第一屆</td>
+                <td class="res__td">21人</td>
+                <td class="res__td">17人</td>
+                <td class="res__td">前端工程師 16 人</td>
+              </tr>
+              <tr class="res__row">
+                <td class="res__td">第一屆</td>
+                <td class="res__td">21人</td>
+                <td class="res__td">17人</td>
+                <td class="res__td">前端工程師 16 人</td>
+              </tr>
+              <tr class="res__row res__row--stripe">
+                <td class="res__td">第一屆</td>
+                <td class="res__td">21人</td>
+                <td class="res__td">17人</td>
+                <td class="res__td">前端工程師 16 人</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="apply">
+            <button class="apply__Btn">我想了解更多 »</button>
+          </div>
+        </div>
       </div>
     </article>
   </main>
-
-  <script src="./js/main.js">
+  <footer class="footer">
+    <div class="container mx-auto">
+      <h4 class="footer__title">前端工程師試題</h4>
+      <p class="footer__desc">本試題純屬練習與測試，文案與影像都為網路上取得而來，請勿營利使用!! <br>
+        Design by Away</p>
+    </div>
+  </footer>
+  <script src=" ./js/main.js">
   </script>
 </body>
 
