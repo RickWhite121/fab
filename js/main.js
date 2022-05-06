@@ -9,6 +9,7 @@ const elemBannerScreen = document.querySelector('#BannerScreen');
 const elemFileTimeDesc = document.querySelector('#FileTimeDesc');
 const elemFileTimeText = document.querySelector('#FileTimeText');
 const elemProgress = document.querySelector('#Progress');
+const elemProgressBar = document.querySelector('#ProgressBar');
 const elemFileApply = document.querySelector('#FileApply');
 
 
@@ -23,12 +24,24 @@ let bannerIndex = 0;
 let progressIndex = 0;
 let deadline = '';
 
+const barTemp = (item, i) => `
+        <div class="progress__text ${item.level <= data.activityData.personNum ? ' js-progress__text' : ''}  progress__text--order${i + 1}">
+          <p class="progress__desc progress__desc--up">
+            達 ${item.level} 人
+          </p>
+          <p class="progress__desc progress__desc--down">
+            送 ${item.productName}
+          </p>
+        </div>`;
+
 (async () => {
   data.activityData = await fetchData();
   // deadline = data.activityData.endTime;
   deadline = '2022/05/06 16:55:00';
   progressIndex = Math.floor(limitedPersonNum / parseInt(data.activityData.personNum, 10)) - 1;
   remainTimeTotal = getTimeRemaining(deadline).total;
+  elemProgress.innerHTML += strMaker(barTemp, data.activityData.list);
+  elemProgressBar.style.width = `${data.activityData.personNum / limitedPersonNum * 100}%`;
   setInterval(timerBannerEvent, 5000);
   setFileStatus()
   setListener();

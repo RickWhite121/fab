@@ -219,7 +219,7 @@ body {
 }
 
 .progress__bar {
-  width: 70%;
+  /* width: 25%; */
   height: 5px;
   background-color: #00a7c6;
   transition: width 0.3s cubic-bezier(0, .96, 0, .96);
@@ -246,17 +246,17 @@ body {
 .progress__text::after {
   content: '';
   position: absolute;
-  left: 40%;
+  left: 30%;
   top: 20px;
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   background-color: #fff;
   border-radius: 50%;
   border: 5px solid #dcdcdc;
 }
 
-.js_progress__text::after {
-  border: 5px solid #00a7c6;
+.js-progress__text::after {
+  border: 6px solid #00a7c6;
 }
 
 .progress__text--order0 {
