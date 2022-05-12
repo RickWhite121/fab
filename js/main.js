@@ -13,7 +13,7 @@ const elemFileTimeDesc = document.querySelector('#FileTimeDesc');
 const elemFileTimeText = document.querySelector('#FileTimeText');
 const elemProgress = document.querySelector('#Progress');
 const elemFileApply = document.querySelector('#FileApply');
-const elemAnimateItem = document.querySelectorAll('#Product .js-anima,#Result .js-anima');
+const elemAnimateItems = document.querySelectorAll('#Product .js-anima,#Result .js-anima');
 
 const dataUrl = './data/activity.json';
 const limitedPersonNum = 100;
@@ -86,11 +86,11 @@ function setFileStatus() {
   } else if (remainTimeTotal > 0 && data.activityData.personNum >= limitedPersonNum) {
     elemFileTimeDesc.innerHTML = '贈送完畢';
     elemFileTimeText.innerHTML = '我們提早結束優惠';
-    elemFileApply.innerHTML = `<p class="file__applyEnd">已爆滿!</p>`;
+    elemFileApply.innerHTML = '<p class="file__applyEnd">已爆滿!</p>';
   } else {
     elemFileTimeDesc.innerHTML = '優惠活動結束';
     elemFileTimeText.innerHTML = '請再關注我們的優惠時間';
-    elemFileApply.innerHTML = `<p class="file__applyEnd">已額滿!</p>`;
+    elemFileApply.innerHTML = '<p class="file__applyEnd">已額滿!</p>';
   };
 };
 
@@ -105,7 +105,7 @@ function setClock() {
         <span class="file__timeNum">${remainTime.seconds < 10 ? '0' + remainTime.seconds : remainTime.seconds}</span> 秒 `;
     if (remainTime.total <= 0) {
       elemFileTimeDesc.innerHTML = '優惠活動結束';
-      elemFileTimeText.innerHTML = `請再關注我們的優惠時間`;
+      elemFileTimeText.innerHTML = '請再關注我們的優惠時間';
       clearInterval(timeInterval);
     };
   }, 1000);
@@ -116,24 +116,37 @@ function createNode() {
   newNode.setAttribute('class', 'cover');
   newNode.setAttribute('id', 'Cover');
   newNode.innerHTML = `
-      <iframe class="video__youtube" width="600" height="400" src="https://www.youtube.com/embed/syFyL9tONRA"
-      title="YouTube video player" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>`
+      <iframe 
+        class="video__youtube" 
+        width="${window.innerWidth > 600 ? 600 : innerWidth}" 
+        height="${400}" src="https://www.youtube.com/embed/syFyL9tONRA"
+        title="YouTube video player" 
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>`;
   return newNode;
 };
 
 function clickToShowVideo() {
   elemWrapper.appendChild(createNode());
-  const scrollTop = document.documentElement.scrollTop;
+  const elemCover = document.querySelector('#Cover');
   document.body.style.overflow = 'hidden';
-  elemWrapper.style.top = `-${scrollTop}px`;
   window.addEventListener('keyup', keyUptoCloseVideo);
+  elemCover.addEventListener('click', clickToCloseVideo);
 };
 
 function keyUptoCloseVideo(e) {
   if (e.keyCode === 27 && elemWrapper.lastChild.id === 'Cover') {
     elemWrapper.lastChild.remove();
+    document.body.style.overflow = 'auto';
+  };
+};
+
+function clickToCloseVideo(e) {
+  const self = e.target;
+  if (self.id === 'Cover') {
+    self.remove();
     document.body.style.overflow = 'auto';
   };
 };
@@ -146,7 +159,7 @@ function strMaker(temp, data, str = '') {
 };
 
 function getItemHeight() {
-  elemAnimateItem.forEach(item => {
+  elemAnimateItems.forEach(item => {
     const offset = item.offsetTop;
     elemsHeight.push(offset);
   });
@@ -154,13 +167,12 @@ function getItemHeight() {
 };
 
 function classAdder(item) {
-  if (item.nodeName === 'H3') {
+  if (item.nodeName === 'H2' || item.nodeName === 'H4') {
     item.classList.add('js-anima--down');
   } else if (item.nodeName === 'H4' || item.nodeName === 'DIV') {
     item.classList.add('js-anima--up');
   };
 };
-
 
 function clickToShowNav() {
   elemNavi.style.display = 'flex';
@@ -170,7 +182,7 @@ function clickToShowNav() {
 function clickToHideNav() {
   elemNavi.style.display = 'none';
   document.removeEventListener('click', clickToHideNav);
-}
+};
 
 function numberRunner(item, count, num = 0, timer = '') {
   timer = setInterval(() => {
@@ -192,7 +204,7 @@ function scrollEvent() {
   const scrollTop = document.documentElement.scrollTop;
   const windowHeight = document.documentElement.clientHeight;
   const windowHalfHeight = scrollTop + windowHeight / 2;
-  const item = elemAnimateItem[animateIndex];
+  const item = elemAnimateItems[animateIndex];
   if (windowHalfHeight > elemsHeight[animateIndex]) {
     classAdder(item);
     if (item.parentNode.id === 'ResultBar') {

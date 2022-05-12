@@ -167,9 +167,14 @@
     margin-left: 0px;
   }
 
+  .banner__screen {
+    height: 85vh;
+  }
+
   .banner__text {
+    top: 37%;
     padding: 50px 35px;
-    width: 70%;
+    width: 80%;
   }
 
   .banner__desc {
@@ -186,6 +191,10 @@
     font-weight: 700;
   }
 
+  .file {
+    top: 0;
+  }
+
   .file__time {
     width: 50%;
   }
@@ -196,9 +205,13 @@
 
   .file__prog {
     position: absolute;
-    top: -80px;
+    top: -100px;
     width: 100%;
-    height: 80px;
+    height: 100px;
+  }
+
+  .intro {
+    padding-top: 50px;
   }
 
   .intro__text {
