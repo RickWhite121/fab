@@ -90,7 +90,9 @@ function setFileStatus() {
   } else {
     elemFileTimeDesc.innerHTML = '優惠活動結束';
     elemFileTimeText.innerHTML = '請再關注我們的優惠時間';
-    elemFileApply.innerHTML = '<p class="file__applyEnd">已額滿!</p>';
+    elemFileApply.innerHTML = `
+    <p class="file__applyStatus">已有 <span class="file__applyNum">${data.activityData.personNum}</span>人報名</p>
+    <button class="file__applyBtn">搶先報名&raquo;</button>`
   };
 };
 

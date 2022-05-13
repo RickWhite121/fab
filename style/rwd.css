@@ -33,13 +33,12 @@
     height: auto;
   }
 
-  .pd {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-
   .pd__title {
     font-size: 36px;
+  }
+
+  .pd__stageTitle::after {
+    left: 47%;
   }
 
   .card {
@@ -52,8 +51,8 @@
 }
 
 @media screen and (max-width: 768px) {
-  .banner__title {
-    font-size: 40px;
+  .banner__text {
+    padding: 80px 70px;
   }
 
   .file {
@@ -120,6 +119,11 @@
     font-size: 22px;
   }
 
+  .pd__stageTitle::after {
+    left: 45%;
+  }
+
+
   .card {
     width: 100%;
   }
@@ -136,6 +140,20 @@
 
   .footer {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 742px) {
+  .banner__desc {
+    font-size: 24px;
+  }
+
+  .banner__desc--textLarge {
+    font-size: 28px
+  }
+
+  .banner__title {
+    font-size: 42px;
   }
 }
 
@@ -173,22 +191,21 @@
 
   .banner__text {
     top: 37%;
-    padding: 50px 35px;
+    padding: 25px 20px;
     width: 80%;
   }
 
   .banner__desc {
-    font-size: 1em;
+    font-size: 28px;
     font-weight: 700;
   }
 
   .banner__desc--textLarge {
-    font-size: 1.5em;
+    font-size: 30px
   }
 
   .banner__title {
-    font-size: 1.8em;
-    font-weight: 700;
+    font-size: 40px;
   }
 
   .file {
@@ -196,11 +213,31 @@
   }
 
   .file__time {
+    justify-content: flex-start;
     width: 50%;
+  }
+
+  .file__timeDesc {
+    font-size: 24px;
   }
 
   .file__apply {
     width: 50%;
+  }
+
+  .file__applyStatus {
+    font-size: 16px;
+  }
+
+  .file__applyNum {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .file__applyBtn {
+    padding: 5px 30px;
+    font-size: 20px;
+
   }
 
   .file__prog {
@@ -220,7 +257,102 @@
     box-sizing: border-box;
   }
 
+  .intro__title {
+    font-size: 26px;
+  }
+
   .intro__desc {
-    width: 87%;
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .pd__title {
+    padding: 10px 10px;
+  }
+
+  .result__title {
+    font-size: 32px;
+  }
+
+  .res__th {
+    font-size: 14px;
+  }
+
+  .res__td {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 414px) {
+    .banner__desc {
+      font-size: 20px;
+    }
+
+    .banner__desc--textLarge {
+      font-size: 22px
+    }
+
+    .banner__title {
+      font-size: 32px;
+    }
+
+    .file__timeText {
+      font-size: 14px;
+    }
+
+    .file__timeNum {
+      font-size: 20px;
+    }
+
+    .pd__title {
+      font-size: 18px;
+    }
+
+    .pd__stageTitle::after {
+      left: 43%;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .apply__Btn {
+      font-size: 22px;
+    }
+
+    .pd__title {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    .banner__desc {
+      font-size: 16px;
+    }
+
+    .banner__desc--textLarge {
+      font-size: 18px
+    }
+
+    .banner__title {
+      font-size: 28px;
+    }
+
+    .file__timeText {
+      font-size: 12px;
+    }
+
+    .file__timeNum {
+      font-size: 18px;
+    }
+
+    .file__applyStatus {
+      font-size: 14px;
+    }
+
+    .file__applyNum {
+      font-size: 22px;
+    }
+
+    .pd__stageTitle::after {
+      left: 41%;
+    }
   }
 }

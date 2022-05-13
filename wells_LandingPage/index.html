@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="./style/meyerweb.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style/base.css">
+  <link rel="stylesheet" href="./style/all.css">
+  <link rel="stylesheet" href="./style/rwd.css" media="screen and (max-width: 1024px)">
+  <script defer src="./js/main.js"></script>
+</head>
+
+<body>
+  <header class="bar" id="Bar">
+    <a href="#">
+      <img class="bar__logo" src="./images/logo.png" alt="F2E前端開發" width="auto" height="auto">
+    </a>
+    <button class="bar__icon" id="BarIcon" type="button">
+      <img src="./images/bars-solid.svg" alt="選單圖示" width="25" height="25">
+    </button>
+    <nav class="bar__wrapper" id="BarWrapper">
+      <a class="bar__btn" href="#Main">挑戰自我</a>
+      <a class="bar__btn" href="#Course">課程說明</a>
+      <a class="bar__btn" href="#Achievement">培訓成果</a>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <div class="banner__wrapper" id="BannerWrapper">
+      <img class="banner__img" src="./images/banr_snow.jpg" alt="banner1" width="100" height="100">
+      <img class="banner__img banner__img2" src="./images/banr_ice.jpg" alt="banner2" width="100" height="100">
+      <img class="banner__img banner__img3" src="./images/banr_run.jpg" alt="banner3" width="100" height="100">
+      <img class="banner__img banner__img4" src="./images/banr_mountain.jpg" alt="banner4" width="100" height="100">
+    </div>
+    <div class="banner__caption">
+      <p class="banner__text1">F2E前端開發</p>
+      <h1 class="banner__text2">前端工程師排版試題</h1>
+      <p class="banner__text1">學會，百萬年薪不是夢</p>
+    </div>
+  </section>
+
+  <div class="top">
+    <a class="top__btn" href="#">Top</a>
+  </div>
+
+  <main class="main" id="Main">
+    <section class="promotions mx-auto">
+      <div class="promotions__time" id="PromotionsTime">
+        <p class="promotions__count" id="PromotionsCount">優惠倒數</p>
+        <p class="promotions__deadline" id="PromotionsDeadline">
+          <span class="promotions__word-large" id="PromotionsDay"></span> 天
+          <span class="promotions__word-large" id="PromotionsHour"></span> 時
+          <span class="promotions__word-large" id="PromotionsMinute"></span> 分
+          <span class="promotions__word-large" id="PromotionsSecond"></span> 秒
+        </p>
+      </div>
+      <div class="promotions__progress">
+        <div class="progress">
+          <progress class="progress__bar" max="100" value="70" id="ProgressBar"></progress>
+          <div class="progress__wrapper" id="ProgressWrapper">
+          </div>
+        </div>
+      </div>
+      <div class="promotions__participant" id="PromotionsParticipant">
+        <p class="promotions__word-small">已有 <span class="promotions__word-large" id="PromotionsPersonNum"></span> 人報名
+        </p>
+        <button class="promotions__btn">搶先報名 <i class="promotions__word-small fas fa-angle-double-right"></i></button>
+      </div>
+    </section>
+
+    <section class="introduction mx-auto">
+      <div class="introduction__wrapper1">
+        <div class="introduction__wrapper2">
+          <h2 class="introduction__title">轉職？成為前端工程師？挑戰自我？<br>三個願望一次滿足！</h2>
+          <p class="introduction__text">我們的學員來自獸醫、咖啡師、圖像設計師等不同背景</p>
+          <p class="introduction__text">他們克服心中的恐懼，冒著最後有可能一無所有的風險</p>
+          <p class="introduction__text">挑戰未知的領域，最終成為前端工程師</p>
+        </div>
+        <div class="introduction__wrapper3">
+          <img class="introduction__img2" src="./images/media_img.jpg" alt="基礎課程" width="100" height="100">
+        </div>
+      </div>
+      <div class="introduction__video" id="IntroductionVideo">
+        <img class="introduction__img1" src="./images/media_video.jpg" alt="軟體工程師戰鬥營" width="100" height="100">
+        <img class="introduction__brand" src="./images/media_brand.png" alt="圖標" width="100" height="100">
+      </div>
+      <button class="introduction__btn">我想了解更多</button>
+    </section>
+
+    <section class="course" id="Course">
+      <h2 class="course__slogan fade-in-down" id="CourseSlogan">想要培養一技之長，成為前端工程師嗎？</h2>
+      <div class="course__wrapper mx-auto" id="CourseWrapper">
+        <article class="course__section">
+          <h4 class="course__text fade-in-up">第一階段</h4>
+          <figure class="card fade-in-up">
+            <div class="card__wrapper">
+              <h5 class="card__week">第一週</h5>
+              <img class="card__img" src="./images/card01.jpg" alt="第一週課程" width="100%" height="200" loading="lazy">
+            </div>
+            <figcaption class="card__info">
+              <h3 class="card__title">程式規劃基礎</h3>
+              <p class="card__intro">組合語言的描述、分析、設計技巧</p>
+            </figcaption>
+          </figure>
+          <figure class="card card-arrow fade-in-up">
+            <div class="card__wrapper">
+              <h5 class="card__week">第二週</h5>
+              <img class="card__img" src="./images/card02.jpg" alt="第二週課程" width="100%" height="200" loading="lazy">
+            </div>
+            <figcaption class="card__info">
+              <h3 class="card__title">物件導向程式設計</h3>
+              <p class="card__intro">具有物件概念的程式設計典範，同時也是一種程式開發的抽象方針。</p>
+            </figcaption>
+          </figure>
+          <figure class="card card-arrow fade-in-up">
+            <div class="card__wrapper">
+              <h5 class="card__week">第三週</h5>
+              <img class="card__img" src="./images/card03.png" alt="第三週課程" width="100%" height="200" loading="lazy">
+            </div>
+            <figcaption class="card__info">
+              <h3 class="card__title">資料結構與演算法</h3>
+              <p class="card__intro">了解資料結構，之後在程式的設計上才能更加熟練應該要使用何種資料結構。</p>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="course__section">
+          <h4 class="course__text fade-in-up">第二階段</h4>
+          <figure class="card fade-in-up">
+            <div class="card__wrapper">
+              <h5 class="card__week">第四週</h5>
+              <img class="card__img" src="./images/card04.png" alt="第四週課程" width="100%" height="200" loading="lazy">
+            </div>
+            <figcaption class="card__info">
+              <h3 class="card__title">各領域語言與框架介紹</h3>
+              <p class="card__intro">框架以應用為目的，結合了多數常用的元件所形成的初始主體架構。</p>
+            </figcaption>
+          </figure>
+          <figure class="card card-arrow fade-in-up">
+            <div class="card__wrapper">
+              <h5 class="card__week">第五週</h5>
+              <img class="card__img" src="./images/card05.png" alt="第五週課程" width="100%" height="200" loading="lazy">
+            </div>
+            <figcaption class="card__info">
+              <h3 class="card__title">版控與開源觀念</h3>
+              <p class="card__intro">版本控制是維護工程藍圖的標準做法，能追蹤工程藍圖從誕生一直到定案的過程。</p>
+            </figcaption>
+          </figure>
+          <figure class="card card-arrow fade-in-up">
+            <div class="card__wrapper">
+              <h5 class="card__week">第六週</h5>
+              <img class="card__img" src="./images/card06.jpg" alt="第六週課程" width="100%" height="200" loading="lazy">
+            </div>
+            <figcaption class="card__info">
+              <h3 class="card__title">專題規劃技巧</h3>
+              <p class="card__intro">解決問題、蒐集資料、實務應用、團隊合作；知識整合與表達能力。</p>
+            </figcaption>
+          </figure>
+          <figure class="card card-arrow fade-in-up">
+            <div class="card__wrapper">
+              <h5 class="card__week">第七週</h5>
+              <img class="card__img" src="./images/card07.jpg" alt="第七週課程" width="100%" height="200" loading="lazy">
+            </div>
+            <figcaption class="card__info">
+              <h3 class="card__title">專題實作與進度追蹤</h3>
+              <p class="card__intro">制定規則、剷除阻礙，觀察運作流程，發掘可能的問題，進一步優化流程，讓團隊協作得更順暢。</p>
+            </figcaption>
+          </figure>
+          <figure class="card card-arrow fade-in-up">
+            <div class="card__wrapper">
+              <h5 class="card__week">第八週</h5>
+              <img class="card__img" src="./images/card08.jpg" alt="第八週課程" width="100%" height="200" loading="lazy">
+            </div>
+            <figcaption class="card__info">
+              <h3 class="card__title">專題成果發表</h3>
+              <p class="card__intro">在這七週學習以來的第一次成果發表，讓大家看到您耀眼的存在!</p>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="course__section">
+          <h4 class="course__text fade-in-up">第三階段</h4>
+          <figure class="card fade-in-up">
+            <div class="card__wrapper">
+              <h5 class="card__week">第九週</h5>
+              <img class="card__img" src="./images/card09.png" alt="第九週課程" width="100%" height="200" loading="lazy">
+            </div>
+            <figcaption class="card__info">
+              <h3 class="card__title">進程與執行緒</h3>
+              <p class="card__intro">進程、線程是一定要搞懂與掌握的知識點，可以增進程式的執行效率。</p>
+            </figcaption>
+          </figure>
+
+          <figure class="card card-arrow fade-in-up">
+            <div class="card__wrapper">
+              <h5 class="card__week">第十週</h5>
+              <img class="card__img" src="./images/card10.png" alt="第十週課程" width="100%" height="200" loading="lazy">
+            </div>
+            <figcaption class="card__info">
+              <h3 class="card__title">網際網路概論</h3>
+              <p class="card__intro">全新實用網路新知，完整介紹網路與資料通訊的相關主題與技術。</p>
+            </figcaption>
+          </figure>
+
+          <figure class="card card-arrow fade-in-up">
+            <div class="card__wrapper">
+              <h5 class="card__week">第十一週</h5>
+              <img class="card__img" src="./images/card11.png" alt="第十一週課程" width="100%" height="200" loading="lazy">
+            </div>
+            <figcaption class="card__info">
+              <h3 class="card__title">各領域進階語法</h3>
+              <p class="card__intro">了解前端領域符合業界使用的進階技巧，並快速辨別使用的領域，加速開發。</p>
+            </figcaption>
+          </figure>
+
+          <figure class="card card-arrow fade-in-up">
+            <div class="card__wrapper">
+              <h5 class="card__week">第十二週</h5>
+              <img class="card__img" src="./images/card12.png" alt="第十二週課程" width="100%" height="200" loading="lazy">
+            </div>
+            <figcaption class="card__info">
+              <h3 class="card__title">近代網頁前端的生態演化</h3>
+              <p class="card__intro">了解網頁前端的前世今生與愛恨糾葛，讓你知道前端技術為什麼這麼火?</p>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="course__section">
+          <h4 class="course__text fade-in-up">第四階段</h4>
+          <figure class="card fade-in-up">
+            <div class="card__wrapper">
+              <h5 class="card__week">第十三週</h5>
+              <img class="card__img" src="./images/card13.png" alt="第十三週課程" width="100%" height="200" loading="lazy">
+            </div>
+            <figcaption class="card__info">
+              <h3 class="card__title">一起來Vue出前端的世界</h3>
+              <p class="card__intro">建立使用者介面的開源JavaScript框架，也是一個建立單頁應用的Web應用框架。</p>
+            </figcaption>
+          </figure>
+
+          <figure class="card card-arrow fade-in-up">
+            <div class="card__wrapper">
+              <h5 class="card__week">第十四週</h5>
+              <img class="card__img" src="./images/card14.png" alt="第十四週課程" width="100%" height="200" loading="lazy">
+            </div>
+            <figcaption class="card__info">
+              <h3 class="card__title">第一次使用Node就上手</h3>
+              <p class="card__intro">能夠在伺服器端運行JavaScript的開放原始碼、跨平台執行環境。</p>
+            </figcaption>
+          </figure>
+
+          <figure class="card card-arrow fade-in-up">
+            <div class="card__wrapper">
+              <h5 class="card__week">第十五週</h5>
+              <img class="card__img" src="./images/card15.png" alt="第十五週課程" width="100%" height="200" loading="lazy">
+            </div>
+            <figcaption class="card__info">
+              <h3 class="card__title">專題成果發表</h3>
+              <p class="card__intro">藉由第二次的成果發表，聯合各廠商來媒合專業人才，讓您結業即就業。</p>
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+      <button class="course__btn">我有興趣</button>
+    </section>
+
+    <article class="achievement mx-auto" id="Achievement">
+      <p class="achievement__title fade-in-down" id="AchievementTitle">培訓成果</p>
+      <section class="achievement__wrapper" id="AchievementWrapper">
+        <div class="achievement__chart fade-in-up">
+          <p><span class="achievement__text" data-num="159">159</span> 人</p>
+          <p>結訓校友</p>
+        </div>
+        <div class="achievement__chart fade-in-up">
+          <p><span class="achievement__text" data-num="85">85</span> %</p>
+          <p>成功轉職率</p>
+        </div>
+        <div class="achievement__chart fade-in-up">
+          <p><span class="achievement__text" data-num="90">90</span> %</p>
+          <p>成為前端工程師</p>
+        </div>
+      </section>
+      <table class="table fade-in-up" id="Table">
+        <thead class="table__thead">
+          <tr class="table__background1">
+            <th></th>
+            <th>培訓人數</th>
+            <th>結訓人數</th>
+            <th>就業人數</th>
+          </tr>
+        </thead>
+        <tbody class="table__tbody">
+          <tr>
+            <td class="table__text">第一屆</td>
+            <td>21人</td>
+            <td>17人</td>
+            <td>前端工程師16人</td>
+          </tr>
+          <tr class="table__background2">
+            <td class="table__text">第二屆</td>
+            <td>20人</td>
+            <td>17人</td>
+            <td>前端工程師13人</td>
+          </tr>
+          <tr>
+            <td class="table__text">第三屆</td>
+            <td>40人</td>
+            <td>38人</td>
+            <td>前端工程師26人</td>
+          </tr>
+          <tr class="table__background2">
+            <td class="table__text">第四屆</td>
+            <td>33人</td>
+            <td>27人</td>
+            <td>前端工程師21人</td>
+          </tr>
+          <tr>
+            <td class="table__text">第五屆</td>
+            <td>28人</td>
+            <td>22人</td>
+            <td>前端工程師17人</td>
+          </tr>
+          <tr class="table__background2">
+            <td class="table__text">第六屆</td>
+            <td>29人</td>
+            <td>20人</td>
+            <td>前端工程師16人</td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="achievement__btn">我想了解更多</button>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__wrapper mx-auto">
+      <p class="footer__text1">前端工程師面試題</p>
+      <p class="footer__text2">本試題純屬練習與測試，文案與影像都為網路上取得而來，請勿營利使用!!</p>
+      <p class="footer__text2">Design by Away</p>
+    </div>
+  </footer>
+
+  <div class="video__wrapper" id="VideoWrapper">
+  </div>
+</body>
+
+</html>

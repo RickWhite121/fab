@@ -268,7 +268,6 @@ body {
 }
 
 .progress__bar {
-  /* position: relative; */
   height: 5px;
   background-color: #00a7c6;
   transition: width 0.3s cubic-bezier(0, .96, 0, .96);
@@ -350,7 +349,6 @@ body {
   font-size: 30px;
   font-weight: 700;
 }
-
 
 .file__applyNum {
   font-size: 32px;
@@ -452,8 +450,8 @@ body {
 .pd {
   width: 100%;
   padding-top: 130px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
   background: linear-gradient(-45deg, #00b2d3 25%, #3cc1dc 0, #3cc1dc 50%, #00b2d3 0, #00b2d3 75%, #3cc1dc 0);
   background-size: 5px 5px;
   box-sizing: border-box;
@@ -499,7 +497,7 @@ body {
   content: '';
   position: absolute;
   top: 100%;
-  left: 47%;
+  left: 48%;
   width: 48px;
   height: 3px;
   background-color: #363636
@@ -578,8 +576,9 @@ body {
 .result {
   max-width: 1030px;
   padding-top: 130px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
+  box-sizing: border-box;
 }
 
 .result__titleZone {
@@ -631,7 +630,7 @@ body {
 }
 
 .res__th {
-  padding: 10px;
+  padding: 15px 10px;
   font-size: 18px;
   color: #000;
   font-weight: 700;
@@ -639,17 +638,12 @@ body {
   white-space: nowrap;
 }
 
-.res__row {
-  height: 60px;
-}
-
 .res__row--stripe {
   background-color: #f6f6f6;
 }
 
 .res__td {
-  padding: 5px 10px;
-  height: 60px;
+  padding: 15px 10px;
   font-size: 18px;
   color: #000;
   border: 1px solid #dfdddd;
@@ -717,4 +711,5 @@ body {
 .footer__desc {
   margin-top: 5px;
   font-size: 12px;
+  color: #cbcbcb;
 }

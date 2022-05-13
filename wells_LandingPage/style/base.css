@@ -1,0 +1,21 @@
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fade-in-up {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 1s;
+}
+
+.fade-in-down {
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: 1s;
+}
+
+.fade-in--active {
+  transform: translateY(0);
+  opacity: 1;
+}
